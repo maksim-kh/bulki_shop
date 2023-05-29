@@ -1,4 +1,7 @@
 import styles from './MealList.module.css'
+import Card from "../UI/Card";
+import MialItem from "./MialItem/MialItem";
+
 const DUMMY_MEALS = [
     {
         id: "m1",
@@ -27,14 +30,16 @@ const DUMMY_MEALS = [
         price: 7.79,
     },
 ];
-const MealList = ()=>{
-    const menu = DUMMY_MEALS.map((el)=> <li> {el.name}</li>)
 
-    return(
+const MealList = () => {
+
+    const menu = DUMMY_MEALS.map((el) => <MialItem key={el.id} name={el.name} description={el.description} />)
+
+    return (
         <section className={styles.meals}>
-            <ul>
-                {menu}
-            </ul>
+            <Card>
+                <ul>{menu}</ul>
+            </Card>
         </section>
     )
 }

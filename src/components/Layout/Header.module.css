@@ -14,8 +14,9 @@
     margin: 0 auto;
     justify-content: space-between;
     z-index: 10;
-
-
+}
+.header h1{
+    margin: 1rem;
 }
 .mainImageContainer{
     display: flex;
