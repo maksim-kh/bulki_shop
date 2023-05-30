@@ -1,16 +1,20 @@
 import styles from './MialItem.module.css'
+import MialItemForm from "./MialItemForm";
 
 const MialItem = (props)=>{
     return (
-     <li className={styles.container}>
+     <li >
          <div className={styles.meal}>
-             <h3>{props.name}</h3>
-             <div className={styles.description}>{props.description}</div>
-             <div className={styles.price}>{props.price}</div>
+             <div >
+                 <h3>{props.name}</h3>
+                 <div className={styles.description}>{props.description}</div>
+                 <div className={styles.price}>{props.price}</div>
+             </div>
+             <div>
+                 <MialItemForm id={props.id}/>
+             </div>
          </div>
-         <div>
 
-         </div>
      </li>
     )
 }

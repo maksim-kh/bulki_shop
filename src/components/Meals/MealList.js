@@ -24,7 +24,7 @@ const DUMMY_MEALS = [
     },
     {
         id: "m4",
-        name: 'Багет"',
+        name: 'Багет',
         description:
             "Рис, лосось, огурец, чука, нори, стружка тунца, соус ореховый",
         price: 7.79,
@@ -33,7 +33,8 @@ const DUMMY_MEALS = [
 
 const MealList = () => {
 
-    const menu = DUMMY_MEALS.map((el) => <MialItem key={el.id} name={el.name} description={el.description} />)
+    const menu = DUMMY_MEALS.map((el) =>
+        <MialItem id={el.id} key={el.id} name={el.name} description={el.description} price={`$${el.price}`}/>)
 
     return (
         <section className={styles.meals}>
