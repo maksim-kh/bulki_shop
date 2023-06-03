@@ -2,13 +2,13 @@ import bakeImg from '../../assets/main_image.jpg'
 import styles from '../Layout/Header.module.css'
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <div className={styles.wrapper}>
                 <header className={styles.header}>
                     <h1>Булошная</h1>
-                    <HeaderCartButton/>
+                    <HeaderCartButton openCart={props.openCart}/>
                 </header>
             </div>
 
